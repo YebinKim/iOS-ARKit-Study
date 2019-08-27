@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Whack_a_jellyfish" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TWF-VI-yBY">
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFT-Uj-OTD">
+                                <rect key="frame" x="20" y="547" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="W8y-Zw-iKe"/>
+                                    <constraint firstAttribute="height" constant="100" id="eX6-dH-gYP"/>
+                                </constraints>
+                                <state key="normal" image="Play"/>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ofE-LM-0Sl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emR-7E-L4k">
+                                <rect key="frame" x="255" y="547" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="6A0-bR-Lzz"/>
+                                    <constraint firstAttribute="width" constant="100" id="QUI-XS-4Q6"/>
+                                </constraints>
+                                <state key="normal" image="Reset"/>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MFq-01-Gkc"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JQj-wA-qFt">
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79R-oi-AXt">
+                                        <rect key="frame" x="155" y="14" width="65" height="22"/>
+                                        <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Bxo-WG-90Z"/>
+                                    <constraint firstItem="79R-oi-AXt" firstAttribute="centerY" secondItem="JQj-wA-qFt" secondAttribute="centerY" id="PV2-5h-FZ6"/>
+                                    <constraint firstItem="79R-oi-AXt" firstAttribute="centerX" secondItem="JQj-wA-qFt" secondAttribute="centerX" id="Zta-iH-LlZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TWF-VI-yBY" firstAttribute="top" secondItem="JQj-wA-qFt" secondAttribute="bottom" id="6BX-da-HpI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YFT-Uj-OTD" secondAttribute="bottom" constant="20" id="I7e-fK-42l"/>
+                            <constraint firstItem="TWF-VI-yBY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IjC-VO-so0"/>
+                            <constraint firstItem="JQj-wA-qFt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M8o-gb-dL5"/>
+                            <constraint firstItem="TWF-VI-yBY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Um5-Gw-olg"/>
+                            <constraint firstItem="JQj-wA-qFt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ga8-9H-NJv"/>
+                            <constraint firstItem="TWF-VI-yBY" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="iak-Z1-Daf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="emR-7E-L4k" secondAttribute="bottom" constant="20" id="rDD-nb-x7Q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JQj-wA-qFt" secondAttribute="trailing" id="tXO-Xi-Jxz"/>
+                            <constraint firstItem="YFT-Uj-OTD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xlh-rX-QqK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="emR-7E-L4k" secondAttribute="trailing" constant="20" id="yup-ph-BYQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="play" destination="YFT-Uj-OTD" id="ECh-QS-bTk"/>
+                        <outlet property="sceneView" destination="TWF-VI-yBY" id="Kat-Bb-qad"/>
+                        <outlet property="timerLabel" destination="79R-oi-AXt" id="9MS-lp-Ozh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Play" width="102" height="102"/>
+        <image name="Reset" width="102" height="102"/>
+    </resources>
+</document>

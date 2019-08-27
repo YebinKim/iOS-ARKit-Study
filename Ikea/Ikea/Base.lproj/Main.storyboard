@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ikea" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XCB-KB-mFU">
+                                <rect key="frame" x="0.0" y="592" width="375" height="75"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="GPj-eo-qjP"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="30" id="w34-va-hdn">
+                                    <size key="itemSize" width="120" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="item" id="aQ0-Sw-Xoe" customClass="ItemCell" customModule="Ikea" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="12.5" width="120" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ns-C2-h5x">
+                                                    <rect key="frame" x="44" y="14" width="32" height="22.5"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="1ns-C2-h5x" firstAttribute="centerY" secondItem="aQ0-Sw-Xoe" secondAttribute="centerY" id="ZBH-0Q-RlE"/>
+                                            <constraint firstItem="1ns-C2-h5x" firstAttribute="centerX" secondItem="aQ0-Sw-Xoe" secondAttribute="centerX" id="huE-3S-fVd"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="itemLabel" destination="1ns-C2-h5x" id="aDR-Vg-aVl"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZSw-Ub-eBj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="592"/>
+                            </arscnView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plane Detected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOQ-nS-nYm">
+                                <rect key="frame" x="129.5" y="20" width="116.5" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jOQ-nS-nYm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hvl-tA-yRb"/>
+                            <constraint firstItem="XCB-KB-mFU" firstAttribute="top" secondItem="ZSw-Ub-eBj" secondAttribute="bottom" id="Lpp-Ed-FMH"/>
+                            <constraint firstItem="ZSw-Ub-eBj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ppq-UD-2Kr"/>
+                            <constraint firstItem="jOQ-nS-nYm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WmO-ry-550"/>
+                            <constraint firstItem="ZSw-Ub-eBj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Xwg-2z-oSM"/>
+                            <constraint firstItem="XCB-KB-mFU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="b4X-jU-ggN"/>
+                            <constraint firstItem="XCB-KB-mFU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cPN-wL-GQw"/>
+                            <constraint firstItem="XCB-KB-mFU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dH3-jR-7ON"/>
+                            <constraint firstItem="ZSw-Ub-eBj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qJp-xQ-UY1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="itemsCollectionView" destination="XCB-KB-mFU" id="wFG-Rc-dVE"/>
+                        <outlet property="planeDetected" destination="jOQ-nS-nYm" id="VHO-TZ-aAJ"/>
+                        <outlet property="sceneView" destination="ZSw-Ub-eBj" id="hhF-tF-jOz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
